@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url('https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2');
+}
+
+/*Colors*/
+
+/*Primary*/
+
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+
+/*Neutral*/
+
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+
+body {
+    font-family: Manrope;
+    background-color: $DarkBlue;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 540px) {
+    .advice-card {
+        display: none;
+        width: 80%;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 0 1.5rem;
+        border-radius: 1rem;
+        background-color: $DarkGrayishBlue;
+
+        .advice-card-title {
+            color: $NeonGreen;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .advice-card-text {
+            color: $LightCyan;
+            font-weight: 700;
+            font-size: 1.75rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .advice-card-divider {
+            text-align: center;
+            width: 100%;
+
+            .advice-card-divider-desktop {
+                display: none;
+            }
+            .advice-card-divider-mobile {
+                display: inline;
+                width: 100%;
+            }
+        }
+
+        .advice-card-btn {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 36px;
+            
+            span {
+                width: 70px;
+                height: 70px;
+                background: $NeonGreen;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 1.5rem hsl(150, 100%, 66%);
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 541px) {
+    .advice-card {
+        display: none;
+        width: 460px;
+        padding: 3rem 1.5rem 0 1.5rem;
+        border-radius: 1rem;
+        background-color: $DarkGrayishBlue;
+
+        .advice-card-title {
+            color: $NeonGreen;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .advice-card-text {
+            color: $LightCyan;
+            font-weight: 700;
+            font-size: 1.75rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .advice-card-divider {
+            text-align: center;
+
+            .advice-card-divider-desktop {
+                display: inline;
+            }
+            .advice-card-divider-mobile {
+                display: none;
+            }
+        }
+
+        .advice-card-btn {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 36px;
+            
+            span {
+                width: 70px;
+                height: 70px;
+                background: $NeonGreen;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 0 1.5rem hsl(150, 100%, 66%);
+                }
+            }
+        }
+    }
+}
+
+
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }

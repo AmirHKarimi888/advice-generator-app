@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./src/style/main.css">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <main>
+      <div class="advice-card">
+        <div class="advice-card-title">
+          ADVICE #<span id="adviceCardId"></span>
+        </div>
+
+        <div class="advice-card-text">
+          “
+          <span id="adviceCardText">
+            
+          </span>
+          ”
+        </div>
+
+        <div class="advice-card-divider">
+          <img class="advice-card-divider-desktop" src="./src/assets/images/pattern-divider-desktop.svg" alt="desktop-divider">
+          <img class="advice-card-divider-mobile" src="./src/assets/images/pattern-divider-mobile.svg" alt="mobile-divider">
+        </div>
+
+        <div class="advice-card-btn">
+          <span id="adviceCardBtn"><img src="./src/assets/images/icon-dice.svg" alt=""></span>
+        </div>
+      </div>
+
+      <div class="spinner"></div>
+    </main>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
